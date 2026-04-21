@@ -1,45 +1,83 @@
 <!DOCTYPE html>
 <html class="dark" lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gestiona tus finanzas personales con Auri. Registra gastos, crea presupuestos y recibe insights automáticos. Descarga gratis en iOS y Android.">
-    <meta name="keywords" content="fintech, finanzas personales, control de gastos, presupuestos, app financiera Colombia">
-    <meta name="author" content="Auri">
-    <meta property="og:title" content="Auri - Control Financiero Inteligente | App Fintech Colombia">
-    <meta property="og:description" content="Toma el control de tu dinero con inteligencia artificial. Sin complicaciones. Sin sorpresas.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://auri.app/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>Auri - Control Financiero Inteligente | App Fintech Colombia</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Gestiona tus finanzas personales con Auri. Registra gastos, crea presupuestos y recibe insights automáticos. Descarga gratis en iOS y Android."/>
+    <meta name="keywords" content="fintech, finanzas personales, control de gastos, presupuestos, app financiera Colombia"/>
+    <meta property="og:title" content="Auri - Control Financiero Inteligente | App Fintech Colombia"/>
+    <meta property="og:description" content="Toma el control de tu dinero con inteligencia artificial. Sin complicaciones. Sin sorpresas."/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <title>Auri Fintech - Toma el Control de Tu Dinero</title>
     
-    <!-- Google Fonts - Mulish -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
-                    colors: {
-                        "primary": "#00F2FF",
-                        "primary-dark": "#00363A",
-                        "secondary": "#8A2BE2",
-                        "success": "#8EFF71",
-                        "background": "#051631",
-                        "surface": "#121829",
-                        "surface-bright": "#1A1F2F",
-                        "surface-variant": "#1E2535",
-                        "text-primary": "#E8ECF4",
-                        "text-secondary": "#BEC4D0"
+                    "colors": {
+                        "on-primary-fixed": "#002022",
+                        "tertiary": "#e5ffd7",
+                        "on-secondary": "#480081",
+                        "inverse-surface": "#d7e2ff",
+                        "surface-container": "#0f1f3b",
+                        "on-secondary-fixed": "#2c0051",
+                        "secondary-container": "#7701d0",
+                        "inverse-on-surface": "#21304c",
+                        "on-background": "#d7e2ff",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#006a71",
+                        "surface-container-low": "#0a1b36",
+                        "secondary-fixed": "#efdbff",
+                        "background": "#02132e",
+                        "surface": "#02132e",
+                        "surface-tint": "#00dbe7",
+                        "tertiary-container": "#84f468",
+                        "on-primary": "#00363a",
+                        "on-secondary-container": "#dcb7ff",
+                        "outline": "#849495",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#1a2a46",
+                        "on-error": "#690005",
+                        "primary": "#e1fdff",
+                        "on-primary-fixed-variant": "#004f54",
+                        "secondary-fixed-dim": "#dcb8ff",
+                        "tertiary-fixed-dim": "#70df55",
+                        "surface-bright": "#2a3956",
+                        "inverse-primary": "#00696f",
+                        "surface-dim": "#02132e",
+                        "surface-container-lowest": "#000d27",
+                        "on-secondary-fixed-variant": "#6700b5",
+                        "secondary": "#dcb8ff",
+                        "on-tertiary-fixed": "#022100",
+                        "on-tertiary-fixed-variant": "#0a5300",
+                        "on-tertiary": "#053900",
+                        "primary-container": "#00f2ff",
+                        "on-surface": "#d7e2ff",
+                        "surface-container-highest": "#263551",
+                        "on-surface-variant": "#b9cacb",
+                        "primary-fixed": "#74f5ff",
+                        "outline-variant": "#3a494b",
+                        "surface-variant": "#263551",
+                        "on-tertiary-container": "#116f00",
+                        "primary-fixed-dim": "#00dbe7",
+                        "tertiary-fixed": "#8bfc6e"
                     },
-                    fontFamily: {
-                        "mulish": ["Mulish", "sans-serif"]
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
                     }
                 }
             }
@@ -47,385 +85,277 @@
     </script>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Mulish', sans-serif;
-            background-color: #051631;
-            color: #E8ECF4;
-            overflow-x: hidden;
-        }
-        
+        body { font-family: 'Manrope', sans-serif; }
         .text-gradient {
-            background: linear-gradient(135deg, #00F2FF 0%, #8A2BE2 100%);
+            background: linear-gradient(135deg, #e1fdff 0%, #00f2ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
-        
         .bg-gradient-primary {
-            background: linear-gradient(135deg, #00F2FF 0%, #8A2BE2 100%);
+            background: linear-gradient(135deg, #e1fdff 0%, #00f2ff 100%);
         }
-        
-        .glow-cyan {
-            box-shadow: 0 0 48px rgba(0, 242, 255, 0.15);
-        }
-        
-        .glow-purple {
-            box-shadow: 0 0 48px rgba(138, 43, 226, 0.15);
-        }
-        
-        .ambient-glow {
-            box-shadow: 0 0 32px rgba(232, 236, 244, 0.08);
-        }
-        
-        .glassmorphism {
-            background: rgba(30, 37, 53, 0.6);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #00F2FF 0%, #8A2BE2 100%);
-            color: #002022;
-            font-weight: 700;
-            padding: 16px 40px;
-            border-radius: 24px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 18px;
-        }
-        
-        .btn-primary:hover {
-            box-shadow: 0 0 30px rgba(0, 242, 255, 0.4);
-            transform: translateY(-2px);
-        }
-        
-        .btn-primary:active {
-            transform: translateY(0);
-        }
-        
-        .section {
-            padding: 80px 24px;
-        }
-        
-        .card {
-            background: #121829;
-            border-radius: 24px;
-            padding: 48px;
-            border: 1px solid rgba(58, 73, 75, 0.2);
-        }
-        
-        .card:hover {
-            background: #1A1F2F;
-            transition: background 0.5s ease;
-        }
-        
-        @media (min-width: 768px) {
-            .section {
-                padding: 80px 64px;
-            }
-        }
-        
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* QR Code styling */
-        .qr-container {
-            background: white;
-            padding: 16px;
-            border-radius: 16px;
-            display: inline-block;
-        }
-        
-        .qr-placeholder {
-            width: 200px;
-            height: 200px;
-            background: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: #666;
-            text-align: center;
-            border-radius: 8px;
-        }
+        .glow-cyan { box-shadow: 0 0 40px rgba(0, 242, 255, 0.2); }
+        .glow-purple { box-shadow: 0 0 60px rgba(119, 1, 208, 0.2); }
+        .ghost-border { border: 1px solid rgba(58, 73, 75, 0.2); }
+        .ambient-shadow { box-shadow: 0 40px 40px -5px rgba(0, 13, 39, 0.4); }
+        body { min-height: max(884px, 100dvh); }
     </style>
 </head>
-<body>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#02132e]/40 backdrop-blur-xl transition-all duration-300">
+    <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+        <div class="flex items-center gap-3">
+            <img alt="Auri logo" class="h-8 w-auto" src="Frame.svg"/>
+        </div>
+        <nav class="hidden md:flex items-center gap-8 font-label text-sm uppercase tracking-widest">
+            <a class="text-[#e1fdff]/70 hover:text-[#e1fdff] transition-colors" href="#caracteristicas">Características</a>
+            <a class="text-[#e1fdff]/70 hover:text-[#e1fdff] transition-colors" href="#testimonios">Testimonios</a>
+        </nav>
+        <button class="bg-gradient-primary text-on-primary font-bold py-2 px-6 rounded-full hover:shadow-[0_0_15px_rgba(116,245,255,0.3)] transition-all scale-95 active:scale-90 flex items-center gap-2">
+            Descargar
+            <span class="material-symbols-outlined text-sm">download</span>
+        </button>
+    </div>
+</header>
+
+<main class="pt-5">
     <!-- Hero Section -->
-    <section class="section min-h-screen flex items-center justify-center relative">
+    <section class="relative min-h-[795px] flex items-center justify-center overflow-hidden px-6 lg:px-8 pt-20 pb-32">
         <!-- Decorative Glows -->
-        <div style="position: absolute; top: 25%; left: 25%; width: 400px; height: 400px; background: rgba(138, 43, 226, 0.15); border-radius: 50%; filter: blur(120px); z-index: 0;"></div>
-        <div style="position: absolute; bottom: 25%; right: 25%; width: 400px; height: 400px; background: rgba(0, 242, 255, 0.1); border-radius: 50%; filter: blur(120px); z-index: 0;"></div>
-        
-        <div style="max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; text-align: center;">
-            <!-- Overline -->
-            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 24px; background: #121829; border: 1px solid rgba(58, 73, 75, 0.2); margin-bottom: 32px;">
-                <span style="width: 8px; height: 8px; border-radius: 50%; background: #00F2FF; animation: pulse 2s ease-in-out infinite;"></span>
-                <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #00F2FF;">FINTECH INTELIGENTE PARA COLOMBIA</span>
-            </div>
-            
-            <!-- Hero Title -->
-            <h1 style="font-size: clamp(40px, 8vw, 72px); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px;">
-                Toma el Control de<br>
-                <span class="text-gradient">Tu Dinero</span>
-            </h1>
-            
-            <!-- Subtitle -->
-            <p style="font-size: clamp(18px, 3vw, 20px); line-height: 1.5; color: #BEC4D0; max-width: 700px; margin: 0 auto 48px;">
-                Auri te ayuda a entender, organizar y optimizar tus finanzas personales con inteligencia artificial. Sin complicaciones. Sin sorpresas.
-            </p>
-            
-            <!-- CTA Section -->
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 32px; margin-top: 48px;">
-                <button class="btn-primary" onclick="window.open('https://apps.apple.com', '_blank')">
-                    Descargar Ahora
-                    <span class="material-symbols-outlined">download</span>
-                </button>
-                
-                <!-- QR Code -->
-                <div style="text-align: center;">
-                    <p style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #00F2FF; margin-bottom: 16px;">
-                        ESCANEA PARA DESCARGAR
-                    </p>
-                    <div class="qr-container glow-cyan">
-                        <div class="qr-placeholder">
-                            <p>Código QR<br>Próximamente</p>
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary-container/20 rounded-full blur-[120px] -z-10"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-[100px] -z-10"></div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 z-10 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high ghost-border backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+                    <span class="text-xs font-label uppercase tracking-widest text-primary-fixed-dim">IA Financiera Personal</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight font-headline leading-[1.1]">
+                    Toma el Control de <br/>
+                    <span class="text-gradient">Tu Dinero</span>
+                </h1>
+                <p class="text-lg lg:text-xl text-on-surface-variant max-w-2xl mx-auto lg:mx-0 font-body leading-relaxed">
+                    El santuario digital para tus finanzas. Claridad, control inteligente y simplicidad en una sola experiencia premium.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center gap-6 pt-4 justify-center lg:justify-start">
+                    <button class="bg-gradient-primary text-on-primary font-bold text-lg py-4 px-10 rounded-full hover:shadow-[0_0_20px_rgba(116,245,255,0.4)] transition-all scale-95 active:scale-90 flex items-center gap-3">
+                        Descargar Ahora
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-xl ghost-border">
+                        <div class="w-16 h-16 bg-white p-1 rounded-lg flex items-center justify-center glow-cyan relative overflow-hidden group">
+                            <img alt="QR Code para descargar Auri" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmyL_KRf6Mye41k1AqiEw_9FwrKR9FlcuhWqZA8176z8XKE5TytiHbnlMvhseyTAOloyGqFI6kMCgu2FHm7QZATcy2jS_Z2T0azs3YA86xefrtyQNG31Ki_O2K2hysNWIjpIKe3yf_q11WIUhpBepHN9-L3svZoIOTFdxGolbOiPvKz7TguvHvfS-WKU1E84t27P2rf9SNZUZhaLaoyxH_3zhxBuuNEYu_AxIEQDsQ1b5qtonCGkDeW3NICcanFde9sTY1vpZkgAY"/>
+                            <div class="absolute inset-0 bg-primary-container/20 group-hover:bg-transparent transition-colors"></div>
+                        </div>
+                        <div class="text-left hidden sm:block">
+                            <p class="text-xs text-on-surface-variant font-label uppercase tracking-wider">Escanea para</p>
+                            <p class="text-sm font-bold text-primary">Instalar App</p>
                         </div>
                     </div>
-                    <p style="font-size: 14px; color: #BEC4D0; margin-top: 16px;">
-                        Disponible en iOS y Android
-                    </p>
                 </div>
+            </div>
+            <!-- Floating Mobile Mockup -->
+            <div class="relative w-full max-w-md mx-auto lg:ml-auto z-10 perspective-1000">
+                <div class="relative rounded-[2.5rem] bg-surface-container-lowest ghost-border p-4 ambient-shadow transform rotate-y-[-10deg] rotate-x-[5deg] hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-700 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-surface-container-lowest to-surface-container-low rounded-[2.5rem] -z-10"></div>
+                    <div class="rounded-[2rem] overflow-hidden aspect-[9/19] bg-surface-container relative">
+                        <img alt="Auri app dashboard interface mockup" class="w-full h-full object-cover" src="Dashboard.png"/>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary-container/10 blur-[80px] -z-20 rounded-full"></div>
             </div>
         </div>
     </section>
     
     <!-- Value Proposition Section -->
-    <section class="section" style="background: #121829;">
-        <div style="max-width: 1280px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 64px;">
-                <h2 style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; margin-bottom: 16px;">
-                    ¿Por qué <span style="color: #00F2FF;">Auri</span>?
-                </h2>
+    <section class="py-24 bg-surface-container-low relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-3xl md:text-4xl font-bold font-headline">El nuevo estándar en <span class="text-primary-fixed-dim">finanzas</span></h2>
             </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
-                <!-- Beneficio 1 -->
-                <div class="card ambient-glow">
-                    <div style="width: 64px; height: 64px; border-radius: 50%; background: #1A1F2F; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; border: 1px solid rgba(58, 73, 75, 0.2);">
-                        <span class="material-symbols-outlined" style="font-size: 32px; color: #00F2FF; font-variation-settings: 'FILL' 1;">visibility</span>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-surface-container-high rounded-xl p-8 ghost-border relative overflow-hidden group hover:bg-surface-container-highest transition-colors duration-500">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-bl-full -z-10 group-hover:bg-primary-container/10 transition-colors"></div>
+                    <div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center mb-6 ghost-border">
+                        <span class="material-symbols-outlined text-primary-container text-2xl" style="font-variation-settings: 'FILL' 1;">visibility</span>
                     </div>
-                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">Visibilidad Total</h3>
-                    <p style="font-size: 16px; line-height: 1.5; color: #BEC4D0;">
-                        Visualiza todos tus ingresos, gastos y deudas en un solo lugar. Sin más excusas para no saber dónde está tu dinero.
-                    </p>
+                    <h3 class="text-xl font-bold mb-3">Claridad Financiera</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Visualiza tu dinero sin ruido. Dashboards limpios y métricas precisas para entender tu patrimonio de un vistazo.</p>
                 </div>
-                
-                <!-- Beneficio 2 -->
-                <div class="card ambient-glow">
-                    <div style="width: 64px; height: 64px; border-radius: 50%; background: #1A1F2F; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; border: 1px solid rgba(58, 73, 75, 0.2);">
-                        <span class="material-symbols-outlined" style="font-size: 32px; color: #8A2BE2; font-variation-settings: 'FILL' 1;">psychology</span>
+                <div class="bg-surface-container-high rounded-xl p-8 ghost-border relative overflow-hidden group hover:bg-surface-container-highest transition-colors duration-500">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/5 rounded-bl-full -z-10 group-hover:bg-secondary-container/10 transition-colors"></div>
+                    <div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center mb-6 ghost-border">
+                        <span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
                     </div>
-                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">Decisiones Informadas</h3>
-                    <p style="font-size: 16px; line-height: 1.5; color: #BEC4D0;">
-                        Recibe insights automáticos sobre tus hábitos financieros y recomendaciones personalizadas para mejorar tu economía.
-                    </p>
+                    <h3 class="text-xl font-bold mb-3">Control Inteligente</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Algoritmos que aprenden de tus hábitos. Recibe alertas y sugerencias proactivas para optimizar tus gastos diarios.</p>
                 </div>
-                
-                <!-- Beneficio 3 -->
-                <div class="card ambient-glow">
-                    <div style="width: 64px; height: 64px; border-radius: 50%; background: #1A1F2F; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; border: 1px solid rgba(58, 73, 75, 0.2);">
-                        <span class="material-symbols-outlined" style="font-size: 32px; color: #8EFF71; font-variation-settings: 'FILL' 1;">check_circle</span>
+                <div class="bg-surface-container-high rounded-xl p-8 ghost-border relative overflow-hidden group hover:bg-surface-container-highest transition-colors duration-500">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-tertiary-container/5 rounded-bl-full -z-10 group-hover:bg-tertiary-container/10 transition-colors"></div>
+                    <div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center mb-6 ghost-border">
+                        <span class="material-symbols-outlined text-tertiary-fixed-dim text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
                     </div>
-                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">Sin Complicaciones</h3>
-                    <p style="font-size: 16px; line-height: 1.5; color: #BEC4D0;">
-                        Interfaz intuitiva diseñada para que gestionar tus finanzas sea tan simple como revisar tus redes sociales.
-                    </p>
+                    <h3 class="text-xl font-bold mb-3">Simplicidad</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Cero fricción. Diseñado bajo principios de usabilidad premium para que gestionar tu dinero sea un placer, no una tarea.</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Features Section -->
-    <section class="section">
-        <div style="max-width: 1280px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 64px;">
-                <h2 style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; margin-bottom: 16px;">
-                    Funcionalidades <span class="text-gradient">Clave</span>
-                </h2>
+    <!-- Key Features Section -->
+    <section class="py-32 relative" id="caracteristicas">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 space-y-32">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <div class="absolute inset-0 bg-secondary-container/10 blur-[80px] rounded-full -z-10"></div>
+                    <div class="bg-surface-container-lowest rounded-xl p-2 ghost-border ambient-shadow aspect-[4/3] overflow-hidden">
+                        <img alt="Control de Suscripciones" class="w-full h-full object-cover rounded-lg" src="suscripciones.png"/>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high ghost-border">
+                        <span class="material-symbols-outlined text-sm text-primary">autorenew</span>
+                        <span class="text-xs font-label uppercase tracking-widest text-on-surface">Suscripciones</span>
+                    </div>
+                    <h2 class="text-3xl lg:text-4xl font-bold font-headline">Control de Suscripciones</h2>
+                    <p class="text-lg text-on-surface-variant leading-relaxed">Descubre exactamente cuánto gastas en suscripciones recurrentes. Auri detecta y agrupa tus pagos automáticos —Netflix, Spotify, gimnasio y más— para que nunca te sorprenda un cobro olvidado.</p>
+                </div>
             </div>
-            
-            <div style="display: grid; gap: 80px;">
-                <!-- Feature 1 -->
-                <div style="display: grid; grid-template-columns: 1fr; md:grid-template-columns: repeat(2, 1fr); gap: 48px; align-items: center;">
-                    <div>
-                        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 24px; background: #121829; border: 1px solid rgba(58, 73, 75, 0.2); margin-bottom: 24px;">
-                            <span class="material-symbols-outlined" style="font-size: 14px; color: #00F2FF;">sync</span>
-                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">Registro Rápido</span>
-                        </div>
-                        <h3 style="font-size: clamp(28px, 4vw, 36px); font-weight: 700; margin-bottom: 24px;">Captura cada gasto en segundos</h3>
-                        <p style="font-size: 18px; line-height: 1.5; color: #BEC4D0;">
-                            Registra transacciones rápidamente con categorías inteligentes, fotos de recibos y reconocimiento automático.
-                        </p>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high ghost-border">
+                        <span class="material-symbols-outlined text-sm text-secondary">history</span>
+                        <span class="text-xs font-label uppercase tracking-widest text-on-surface">Visibilidad</span>
                     </div>
-                    <div style="background: #121829; border-radius: 24px; padding: 16px; border: 1px solid rgba(58, 73, 75, 0.2);">
-                        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, rgba(0, 242, 255, 0.1) 0%, rgba(138, 43, 226, 0.1) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
-                            <span style="font-size: 48px; color: #00F2FF;" class="material-symbols-outlined">receipt_long</span>
-                        </div>
-                    </div>
+                    <h2 class="text-3xl lg:text-4xl font-bold font-headline">Historial Unificado</h2>
+                    <p class="text-lg text-on-surface-variant leading-relaxed">Todas tus tarjetas, cuentas de ahorro e inversiones en un solo flujo temporal continuo. Observa la historia completa de tu dinero con filtros intuitivos y búsqueda instantánea.</p>
                 </div>
-                
-                <!-- Feature 2 -->
-                <div style="display: grid; grid-template-columns: 1fr; md:grid-template-columns: repeat(2, 1fr); gap: 48px; align-items: center;">
-                    <div style="order: 2; md:order: 1;">
-                        <div style="background: #121829; border-radius: 24px; padding: 16px; border: 1px solid rgba(58, 73, 75, 0.2);">
-                            <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(0, 242, 255, 0.1) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
-                                <span style="font-size: 48px; color: #8A2BE2;" class="material-symbols-outlined">timeline</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="order: 1; md:order: 2;">
-                        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 24px; background: #121829; border: 1px solid rgba(58, 73, 75, 0.2); margin-bottom: 24px;">
-                            <span class="material-symbols-outlined" style="font-size: 14px; color: #8A2BE2;">history</span>
-                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">Visibilidad</span>
-                        </div>
-                        <h3 style="font-size: clamp(28px, 4vw, 36px); font-weight: 700; margin-bottom: 24px;">Tu timeline financiero completo</h3>
-                        <p style="font-size: 18px; line-height: 1.5; color: #BEC4D0;">
-                            Todos tus ingresos, gastos y movimientos organizados en una línea de tiempo clara y filtrable.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div style="display: grid; grid-template-columns: 1fr; md:grid-template-columns: repeat(2, 1fr); gap: 48px; align-items: center;">
-                    <div>
-                        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 24px; background: #121829; border: 1px solid rgba(58, 73, 75, 0.2); margin-bottom: 24px;">
-                            <span class="material-symbols-outlined" style="font-size: 14px; color: #8EFF71;">attach_money</span>
-                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">Control</span>
-                        </div>
-                        <h3 style="font-size: clamp(28px, 4vw, 36px); font-weight: 700; margin-bottom: 24px;">Define límites, mantén el control</h3>
-                        <p style="font-size: 18px; line-height: 1.5; color: #BEC4D0;">
-                            Crea presupuestos por categoría, recibe alertas cuando te acerques a los límites y ajusta sobre la marcha.
-                        </p>
-                    </div>
-                    <div style="background: #121829; border-radius: 24px; padding: 16px; border: 1px solid rgba(58, 73, 75, 0.2);">
-                        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, rgba(142, 255, 113, 0.1) 0%, rgba(0, 242, 255, 0.1) 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
-                            <span style="font-size: 48px; color: #8EFF71;" class="material-symbols-outlined">savings</span>
-                        </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-primary-container/10 blur-[80px] rounded-full -z-10"></div>
+                        <img alt="Historial Unificado" class="w-full h-full object-cover rounded-lg" src="Historial.png"/>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Social Proof Section -->
-    <section class="section" style="background: #121829;">
-        <div style="max-width: 1280px; margin: 0 auto; text-align: center;">
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #00F2FF; margin-bottom: 16px;">CONFIADO POR MILES</p>
-                <h2 style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; margin-bottom: 32px;">
-                    Únete a la Revolución Fintech en Colombia
-                </h2>
+    <!-- Social Proof / Testimonials -->
+    <section class="py-24 bg-surface-container-low relative overflow-hidden" id="testimonios">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-full bg-secondary-container/5 blur-[120px] -z-10"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-headline">Confianza Cuantificable</h2>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-8 pt-6">
+                    <div class="text-center">
+                        <p class="text-4xl font-extrabold text-gradient">10K+</p>
+                        <p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mt-2">Descargas</p>
+                    </div>
+                    <div class="hidden sm:block w-px h-12 bg-outline-variant/40"></div>
+                    <div class="text-center">
+                        <p class="text-4xl font-extrabold text-gradient">95%</p>
+                        <p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mt-2">Satisfacción</p>
+                    </div>
+                </div>
             </div>
-            
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 48px; margin-bottom: 64px;">
-                <div>
-                    <p class="text-gradient" style="font-size: 48px; font-weight: 800; margin-bottom: 8px;">10,000+</p>
-                    <p style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #BEC4D0;">Descargas</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-surface-container/60 backdrop-blur-md rounded-xl p-8 ghost-border ambient-shadow">
+                    <div class="flex items-center gap-1 mb-4 text-primary-container">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="text-on-surface-variant italic mb-6">"La interfaz es ridículamente elegante. Por primera vez siento que entiendo a dónde va mi dinero sin abrumarme con hojas de cálculo."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+                            <img alt="Elena R." class="w-full h-full object-cover grayscale opacity-80" src="Elena.jpeg"/>
+                        </div>
+                        <div><p class="text-sm font-bold">Elena R.</p><p class="text-xs text-on-surface-variant">Diseñadora UX</p></div>
+                    </div>
                 </div>
-                <div>
-                    <p class="text-gradient" style="font-size: 48px; font-weight: 800; margin-bottom: 8px;">95%</p>
-                    <p style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #BEC4D0;">Satisfacción</p>
+                <div class="bg-surface-container/60 backdrop-blur-md rounded-xl p-8 ghost-border ambient-shadow translate-y-4">
+                    <div class="flex items-center gap-1 mb-4 text-primary-container">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="text-on-surface-variant italic mb-6">"Auri transformó mis finanzas de un caos a un sistema predecible. Los insights de IA son como tener un asesor personal."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+                            <img alt="Marcos T." class="w-full h-full object-cover grayscale opacity-80" src="Marcos.jpeg"/>
+                        </div>
+                        <div><p class="text-sm font-bold">Marcos T.</p><p class="text-xs text-on-surface-variant">Emprendedor</p></div>
+                    </div>
                 </div>
-                <div>
-                    <p class="text-gradient" style="font-size: 48px; font-weight: 800; margin-bottom: 8px;">500+</p>
-                    <p style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #BEC4D0;">Reseñas 5★</p>
+                <div class="bg-surface-container/60 backdrop-blur-md rounded-xl p-8 ghost-border ambient-shadow md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-1 mb-4 text-primary-container">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>
+                    <p class="text-on-surface-variant italic mb-6">"El diseño oscuro y los tonos neón hacen que revisar mis cuentas se sienta como una experiencia premium y segura."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+                            <img alt="Sofía L." class="w-full h-full object-cover grayscale opacity-80" src="Sofia.jpeg"/>
+                        </div>
+                        <div><p class="text-sm font-bold">Sofía L.</p><p class="text-xs text-on-surface-variant">Arquitecta</p></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Final CTA Section -->
-    <section class="section" style="text-align: center; position: relative;">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: rgba(0, 242, 255, 0.1); border-radius: 50%; filter: blur(150px); z-index: 0;"></div>
-        
-        <div style="max-width: 900px; margin: 0 auto; position: relative; z-index: 1;">
-            <h2 style="font-size: clamp(36px, 6vw, 56px); font-weight: 800; line-height: 1.1; margin-bottom: 24px;">
-                Empieza a Tomar<br>
-                <span class="text-gradient">Control Hoy</span>
+    <section class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-surface-container-highest/20 -z-20"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-primary-container/10 blur-[150px] -z-10 rounded-full"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-10">
+            <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight font-headline">
+                Inicia tu viaje hacia la <br/>
+                <span class="text-gradient">Libertad Financiera</span>
             </h2>
-            <p style="font-size: 20px; line-height: 1.5; color: #BEC4D0; margin-bottom: 48px;">
-                Descarga Auri gratis y transforma tu relación con el dinero en menos de 5 minutos.
-            </p>
-            
-            <button class="btn-primary" onclick="window.open('https://apps.apple.com', '_blank')" style="font-size: 20px; padding: 20px 48px;">
-                Descargar App Gratis
-                <span class="material-symbols-outlined" style="font-size: 24px;">download</span>
-            </button>
-            
-            <div style="margin-top: 48px;">
-                <div class="qr-container glow-cyan" style="margin: 0 auto;">
-                    <div class="qr-placeholder">
-                        <p>Código QR<br>Próximamente</p>
+            <p class="text-xl text-on-surface-variant">Únete a miles de usuarios que ya tomaron el control. Descarga Auri hoy.</p>
+            <div class="flex flex-col items-center gap-8 justify-center pt-8">
+                <button class="bg-gradient-primary text-on-primary font-bold text-xl py-5 px-12 rounded-full hover:shadow-[0_0_30px_rgba(116,245,255,0.5)] transition-all scale-95 active:scale-90 flex items-center gap-3">
+                    Descargar App Gratis
+                    <span class="material-symbols-outlined text-2xl">download</span>
+                </button>
+                <div class="p-4 bg-surface-container-low rounded-2xl ghost-border inline-block">
+                    <div class="w-32 h-32 bg-white p-2 rounded-xl flex items-center justify-center glow-cyan mx-auto">
+                        <img alt="QR Code" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABQaa2KKE7o51SdzizGdekX1CQbXKUKlcT887Or1AAUKpWhQjCHNsTJjsSWNUcAaaY6ynwSQ1rpynTN6FbbXvU-imNbvPnvjeRsuaUFF1icQ0MvjZ9iHQ5wdK0mh07tuoK9_fI3ApbZOUST9YRoz_CJWDq_UcwFN57by9-VR_hCcDYRYPbwYXcxilTi5acpy4xsc2BdNTKWCF6sQy79N9hU0V6LtuemR9SZ8TRalV6LSjWQimw7aLCLuvGWX0JrBP4MZn16Oxvdhk"/>
                     </div>
+                    <p class="text-sm font-bold text-primary mt-3">Escanea para descargar</p>
                 </div>
-                <p style="font-size: 14px; font-weight: 600; color: #00F2FF; margin-top: 16px;">O escanea para descargar</p>
-                <p style="font-size: 14px; color: #BEC4D0; margin-top: 8px;">Disponible en iOS y Android</p>
             </div>
         </div>
     </section>
-    
-    <!-- Footer -->
-    <footer style="padding: 48px 24px; background: #000d27; border-top: 1px solid rgba(58, 73, 75, 0.1);">
-        <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; md:flex-direction: row; justify-content: space-between; align-items: center; gap: 24px;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-                <span class="material-symbols-outlined" style="color: #00F2FF; font-size: 32px;">account_balance_wallet</span>
-                <span style="font-size: 24px; font-weight: 800; color: #00F2FF;">Auri</span>
-            </div>
-            
-            <nav style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;">
-                <a href="privacy.html" style="color: #BEC4D0; text-decoration: none; transition: color 0.3s;">Privacidad</a>
-                <a href="terms.html" style="color: #BEC4D0; text-decoration: none; transition: color 0.3s;">Términos</a>
-                <a href="support.html" style="color: #BEC4D0; text-decoration: none; transition: color 0.3s;">Soporte</a>
-            </nav>
-            
-            <p style="font-size: 14px; color: #BEC4D0;">© 2026 Auri. Todos los derechos reservados.</p>
+
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#000d27] border-t border-outline-variant/10">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+        <div class="flex items-center gap-2 text-lg font-bold text-[#e1fdff] font-headline">
+            <span class="material-symbols-outlined text-primary-container">account_balance_wallet</span>
+            Auri
         </div>
-    </footer>
-    
-    <script>
-        // Simple animation for pulse effect
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes pulse {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0.5; }
-            }
-        `;
-        document.head.appendChild(style);
-        
-        // Smooth scroll for links (if any)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+        <nav class="flex flex-wrap justify-center gap-6 font-['Manrope'] text-sm tracking-wide uppercase">
+            <a class="text-slate-500 hover:text-[#e1fdff] transition-colors opacity-80 hover:opacity-100" href="privacy.html">Privacidad</a>
+            <a class="text-slate-500 hover:text-[#e1fdff] transition-colors opacity-80 hover:opacity-100" href="terms.html">Términos</a>
+            <a class="text-slate-500 hover:text-[#e1fdff] transition-colors opacity-80 hover:opacity-100" href="support.html">Soporte</a>
+        </nav>
+        <div class="text-sm text-slate-500 font-label tracking-wide text-center md:text-right">
+            © 2026 Auri Fintech. The Digital Sanctuary.
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
