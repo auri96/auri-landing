@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar cuenta - Auri</title>
+    <meta name="description" content="Cómo solicitar la eliminación de tu cuenta de Auri y los datos asociados.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Mulish', sans-serif;
+            background: #051631;
+            color: #E8ECF4;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        header {
+            background: #121829;
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(58, 73, 75, 0.2);
+        }
+        nav {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #00F2FF;
+            text-decoration: none;
+        }
+        nav a {
+            color: #BEC4D0;
+            text-decoration: none;
+            margin-left: 24px;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #00F2FF; }
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #00F2FF 0%, #8A2BE2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: #00F2FF;
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #E8ECF4;
+        }
+        p { margin-bottom: 16px; color: #BEC4D0; }
+        ul, ol { margin-left: 24px; margin-bottom: 16px; color: #BEC4D0; }
+        li { margin-bottom: 8px; }
+        a { color: #00F2FF; text-decoration: underline; }
+        a:hover { color: #8A2BE2; }
+        strong { color: #E8ECF4; }
+        .card {
+            background: #121829;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(58, 73, 75, 0.2);
+        }
+        .step {
+            background: #121829;
+            border-left: 4px solid #00F2FF;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+        .step-num {
+            display: inline-block;
+            background: linear-gradient(135deg, #00F2FF 0%, #8A2BE2 100%);
+            color: #002022;
+            font-weight: 800;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            margin-right: 12px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-left: 8px;
+        }
+        .badge-deleted { background: rgba(255, 92, 92, 0.15); color: #FF8A8A; }
+        .badge-retained { background: rgba(255, 196, 64, 0.15); color: #FFD580; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            background: #121829;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        th, td {
+            text-align: left;
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(58, 73, 75, 0.2);
+            color: #BEC4D0;
+        }
+        th { background: #1A1F2F; color: #E8ECF4; font-weight: 700; }
+        tr:last-child td { border-bottom: none; }
+        .cta {
+            background: linear-gradient(135deg, #00F2FF 0%, #8A2BE2 100%);
+            color: #002022;
+            padding: 14px 32px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        .cta:hover { color: #002022; text-decoration: none; opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Auri</a>
+            <div>
+                <a href="privacy.html">Privacidad</a>
+                <a href="terms.html">Términos</a>
+                <a href="support.html">Soporte</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Eliminar tu cuenta de Auri</h1>
+            <p style="font-size: 18px; margin-bottom: 32px;">
+                <strong>Auri</strong> (desarrollada por Auri Finanzas) te permite eliminar tu cuenta
+                y los datos asociados en cualquier momento. Esta página describe cómo solicitarlo,
+                qué información se borra, qué datos se conservan y los plazos de retención.
+            </p>
+
+            <h2>Opción 1 — Eliminar desde la app (recomendado)</h2>
+            <div class="step">
+                <p><span class="step-num">1</span> Abre la app <strong>Auri</strong> en tu dispositivo e inicia sesión.</p>
+            </div>
+            <div class="step">
+                <p><span class="step-num">2</span> Ve a <strong>Configuración → Cuenta → Eliminar cuenta</strong>.</p>
+            </div>
+            <div class="step">
+                <p><span class="step-num">3</span> Confirma tu identidad ingresando tu contraseña actual (si tu cuenta usa email/contraseña).</p>
+            </div>
+            <div class="step">
+                <p><span class="step-num">4</span> Confirma la eliminación. Tu cuenta queda inaccesible al instante y recibirás un correo de confirmación.</p>
+            </div>
+
+            <h2>Opción 2 — Eliminar por correo</h2>
+            <p>
+                Si no puedes acceder a la app, escribe a
+                <a href="mailto:privacy@aurifinanzas.com?subject=Solicitud%20de%20eliminaci%C3%B3n%20de%20cuenta">privacy@aurifinanzas.com</a>
+                desde el correo asociado a tu cuenta con el asunto <em>"Solicitud de eliminación de cuenta"</em>.
+                Verificaremos tu identidad y procesaremos la eliminación en un plazo máximo de 5 días hábiles.
+            </p>
+            <p>
+                <a href="mailto:privacy@aurifinanzas.com?subject=Solicitud%20de%20eliminaci%C3%B3n%20de%20cuenta" class="cta">Enviar solicitud por correo</a>
+            </p>
+
+            <h2>Qué datos se eliminan</h2>
+            <p>Al confirmar la eliminación borramos de forma permanente:</p>
+            <table>
+                <thead>
+                    <tr><th>Tipo de dato</th><th>Estado</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nombre y correo electrónico</td><td><span class="badge badge-deleted">Eliminado</span></td></tr>
+                    <tr><td>Contraseña (hash) y vínculos OAuth (Google)</td><td><span class="badge badge-deleted">Eliminado</span></td></tr>
+                    <tr><td>Transacciones, ingresos, gastos y categorías</td><td><span class="badge badge-deleted">Eliminado</span></td></tr>
+                    <tr><td>Recordatorios y pagos recurrentes</td><td><span class="badge badge-deleted">Eliminado</span></td></tr>
+                    <tr><td>Suscripciones y preferencias de la app</td><td><span class="badge badge-deleted">Eliminado</span></td></tr>
+                    <tr><td>Tokens de notificaciones push (FCM)</td><td><span class="badge badge-deleted">Eliminado</span></td></tr>
+                    <tr><td>Sesiones activas y tokens de autenticación</td><td><span class="badge badge-deleted">Eliminado</span></td></tr>
+                </tbody>
+            </table>
+
+            <h2>Qué datos podemos conservar y por cuánto tiempo</h2>
+            <p>Por obligaciones legales, contables y de seguridad podemos conservar de forma anonimizada o agregada:</p>
+            <table>
+                <thead>
+                    <tr><th>Tipo de dato</th><th>Período de retención</th><th>Motivo</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Registros de transacciones de pago (Google Play / App Store)</td>
+                        <td>Hasta 5 años</td>
+                        <td>Obligaciones tributarias y contables (Estatuto Tributario Colombia, art. 632)</td>
+                    </tr>
+                    <tr>
+                        <td>Logs de seguridad y auditoría (sin datos personales identificables)</td>
+                        <td>Hasta 12 meses</td>
+                        <td>Prevención de fraude e investigación de incidentes</td>
+                    </tr>
+                    <tr>
+                        <td>Datos requeridos por orden judicial o autoridad competente</td>
+                        <td>Lo que exija la ley</td>
+                        <td>Cumplimiento legal</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Plazos del proceso</h2>
+            <div class="card">
+                <h3>Inmediato</h3>
+                <p>Tu cuenta queda inaccesible. No podrás iniciar sesión y se eliminan todas las sesiones activas y el token de notificaciones.</p>
+
+                <h3>Hasta 30 días — ventana de restauración</h3>
+                <p>
+                    Por seguridad, durante los 30 días siguientes puedes restaurar tu cuenta usando el enlace
+                    enviado a tu correo al momento de la eliminación. Durante este período tus datos permanecen
+                    cifrados y aislados, sin ser accesibles desde la app.
+                </p>
+
+                <h3>Después de 30 días — eliminación definitiva</h3>
+                <p>
+                    Al finalizar la ventana de 30 días, un proceso automatizado <strong>borra físicamente y
+                    de forma irreversible</strong> todos los datos asociados a tu cuenta de nuestras bases
+                    de datos, salvo lo indicado en la sección de retención.
+                </p>
+            </div>
+
+            <h2>¿Tienes dudas?</h2>
+            <p>
+                Si necesitas más información sobre el tratamiento de tus datos, consulta nuestra
+                <a href="privacy.html">Política de Privacidad</a> o escríbenos a
+                <a href="mailto:privacy@aurifinanzas.com">privacy@aurifinanzas.com</a>.
+            </p>
+
+            <p style="margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(58, 73, 75, 0.2); text-align: center;">
+                © 2026 Auri. Todos los derechos reservados.
+            </p>
+        </div>
+    </main>
+</body>
+</html>
